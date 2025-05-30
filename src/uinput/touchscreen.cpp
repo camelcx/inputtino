@@ -39,11 +39,11 @@ Result<libevdev_uinput_ptr> create_touch_screen(const DeviceDefinition &device) 
   input_absinfo mt_slot{0, 0, NUM_FINGERS - 1, 0, 0, 0};
   libevdev_enable_event_code(dev, EV_ABS, ABS_MT_SLOT, &mt_slot);
 
-  input_absinfo abs_x{0, 0, TOUCH_MAX_X, 0, 0, 0};
+  input_absinfo abs_x{0, 0, TOUCH_MAX_X, 0, 0, 118};
   libevdev_enable_event_code(dev, EV_ABS, ABS_X, &abs_x);
   libevdev_enable_event_code(dev, EV_ABS, ABS_MT_POSITION_X, &abs_x);
 
-  input_absinfo abs_y{0, 0, TOUCH_MAX_Y, 0, 0, 0};
+  input_absinfo abs_y{0, 0, TOUCH_MAX_Y, 0, 0, 142};
   libevdev_enable_event_code(dev, EV_ABS, ABS_Y, &abs_y);
   libevdev_enable_event_code(dev, EV_ABS, ABS_MT_POSITION_Y, &abs_y);
 
